@@ -40,11 +40,12 @@ jobs:
          username: ${{ secrets.DOCKERHUB_USERNAME }}
          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Push to Docker
-        run: docker push "sudohash/kouncil:${{ env.MVN_VERSION }}"
-
-      - name: Tag Latest Snapshot
-        run: docker tag "sudohash/kouncil:${{ env.MVN_VERSION }}" "sudohash/kouncil:latest_snapshot"
-
-      - name: Push to Docker
-        run: docker push "sudohash/kouncil:latest_snapshot"
+      - name: Build and Push Multi-Arch Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            sudohash/kouncil:${{ env.MVN_VERSION }}
+            sudohash/kouncil:latest
+          platforms: linux/amd64,linux/arm64
