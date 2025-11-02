@@ -5,7 +5,7 @@ the provided `logback.xml` file as-is or use it as a reference to create your cu
 If you use the provided `logback.xml`, logs will be placed under logs/kouncil.log
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e logging.config="path_to_your_logback_xml_file_in_docker_container" -v path_to_your_local_logback_xml_folder:/path_to_your_container_logback_xml_folder consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e logging.config="path_to_your_logback_xml_file_in_docker_container" -v path_to_your_local_logback_xml_folder:/path_to_your_container_logback_xml_folder sudohash/kouncil:latest
 ```
 
 If you want the logs to be accessible outside the Docker container, you can add another volume to

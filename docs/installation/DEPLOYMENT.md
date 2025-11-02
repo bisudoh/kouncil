@@ -15,7 +15,7 @@ Simple configuration is passed directly into `docker run` command using `bootstr
 environment variable, just as we've seen in [Quick start](../README.md#quick-start):
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" sudohash/kouncil:latest
 ```
 
 `bootstrapServers` variable expects a comma-separated list of brokers, each belonging to a different
@@ -24,7 +24,7 @@ cluster. Kouncil only needs to know about a single broker from the cluster in or
 The simplest possible configuration looks like this:
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" sudohash/kouncil:latest
 ```
 
 Next, visit [http://localhost](http://localhost) in your browser, and you should be greeted with a
@@ -34,13 +34,13 @@ If you have multiple clusters and wish to manage them all with Kouncil, you can 
 specifying one broker from each cluster using a comma-separated list:
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092,kafka1.another.cluster:8001" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092,kafka1.another.cluster:8001" sudohash/kouncil:latest
 ```
 
 If you want to set Schema Registry URL, use `schemaRegistryUrl` environment variable, for instance:
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e schemaRegistryUrl="http://schema.registry:8081" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e schemaRegistryUrl="http://schema.registry:8081" sudohash/kouncil:latest
 ```
 
 This URL will be used for every cluster in `boostrapServers` variable. If you want to be more
@@ -51,13 +51,13 @@ can use `resendHeadersToKeep` environment variable and pass the list of comma-se
 names, for example:
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e resendHeadersToKeep="requestId,version" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e resendHeadersToKeep="requestId,version" sudohash/kouncil:latest
 ```
 
 To change the port on which Kouncil listens for connections, just modify the `-p` argument, like so:
 
 ```bash
-docker run -d -p 7070:8080 -e bootstrapServers="kafka1:9092" consdata/kouncil:latest
+docker run -d -p 7070:8080 -e bootstrapServers="kafka1:9092" sudohash/kouncil:latest
 ```
 
 It will cause Kouncil to listen on port `7070`.
@@ -75,7 +75,7 @@ directory containing that file with Docker. Let's say your `kouncil.yaml` lives
 in `/home/users/test/Kouncil/config/` - this is what your `docker run` should look like:
 
 ```bash
-docker run -p 80:8080 -v /home/users/test/Kouncil/config/:/config/ consdata/kouncil:latest
+docker run -p 80:8080 -v /home/users/test/Kouncil/config/:/config/ sudohash/kouncil:latest
 ```
 
 The format of `kouncil.yaml` is described below.

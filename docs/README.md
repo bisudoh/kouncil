@@ -25,7 +25,7 @@ features of Kouncil, which can be found [here]. (https://kouncil-demo.web.app/)
 The easiest way to start working with Kouncil is by using Docker:
 
 ```bash
-docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e kouncil.auth.active-provider="inmemory" consdata/kouncil:latest
+docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092" -e kouncil.auth.active-provider="inmemory" sudohash/kouncil:latest
 ```
 There are only two required environment variables: `bootstrapServers`, which should point to one of
 the brokers in your Kafka cluster, and `kouncil.auth.active-provider`, which specifies
@@ -36,11 +36,11 @@ you are good to go. Kouncil will automatically do the rest.
 Additionally, Kouncil supports multiple clusters. Hosts specified in `bootstrapServers` may point to
 brokers in several clusters, and Kouncil will recognize that properly. Brokers should be separated
 using a comma,
-i.e.: `docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092,kafka1.another.cluster:8001" -e kouncil.auth.active-provider="inmemory" consdata/kouncil:latest`
+i.e.: `docker run -d -p 80:8080 -e bootstrapServers="kafka1:9092,kafka1.another.cluster:8001" -e kouncil.auth.active-provider="inmemory" sudohash/kouncil:latest`
 
 After the `docker run` command, head to [http://localhost](http://localhost).
 
-Images for Kouncil are hosted here: https://hub.docker.com/r/consdata/kouncil.
+Images for Kouncil are hosted here: https://hub.docker.com/r/sudohash/kouncil.
 
 For more advanced configuration, consult the [Deployment](installation/DEPLOYMENT.md#deployment)
 section.

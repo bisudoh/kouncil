@@ -139,7 +139,7 @@ export class ToolbarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   goToGithub(): void {
-    window.open('https://github.com/consdata/kouncil', '_blank');
+    window.open('https://github.com/bisudoh/kouncil', '_blank');
   }
 
   logout(): void {
