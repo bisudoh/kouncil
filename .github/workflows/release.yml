@@ -63,6 +63,6 @@ jobs:
           context: .
           push: true
           tags: |
-            consdata/kouncil:${{ env.MVN_VERSION }}
-            consdata/kouncil:latest
+            sudohash/kouncil:${{ env.MVN_VERSION }}
+            sudohash/kouncil:latest
           platforms: linux/amd64,linux/arm64
