@@ -28,12 +28,12 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Consdata/kouncil</url>
+			<url>https://maven.pkg.github.com/sudohash/kouncil</url>
 		</repository>
 	</distributionManagement>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/Consdata/kouncil.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/sudohash/kouncil.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
