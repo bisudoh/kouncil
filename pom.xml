@@ -33,7 +33,7 @@
 	</distributionManagement>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/sudohash/kouncil.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/bisudoh/kouncil.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
