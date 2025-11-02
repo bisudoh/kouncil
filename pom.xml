@@ -33,7 +33,9 @@
 	</distributionManagement>
 
 	<scm>
+		<connection>scm:git:https://github.com/bisudoh/kouncil.git</connection>
 		<developerConnection>scm:git:https://github.com/bisudoh/kouncil.git</developerConnection>
+		<url>https://github.com/bisudoh/kouncil</url>
 		<tag>HEAD</tag>
 	</scm>
 
