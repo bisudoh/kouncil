@@ -4,7 +4,7 @@
 
 	<groupId>com.consdata</groupId>
 	<artifactId>kouncil</artifactId>
-	<version>1.10-SNAPSHOT</version>
+	<version>1.10</version>
 	<packaging>pom</packaging>
 
 	<name>kouncil</name>
@@ -36,7 +36,7 @@
 		<connection>scm:git:https://github.com/bisudoh/kouncil.git</connection>
 		<developerConnection>scm:git:https://github.com/bisudoh/kouncil.git</developerConnection>
 		<url>https://github.com/bisudoh/kouncil</url>
-		<tag>HEAD</tag>
+		<tag>kouncil-1.10</tag>
 	</scm>
 
 	<modules>
